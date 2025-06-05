@@ -56,3 +56,12 @@ end
 module Kernel
   include Dputs
 end
+
+if defined?(Rails)
+  require_relative "dputs/railtie"
+end
+
+if defined?(Sinatra)
+  require_relative "dputs/sinatra"
+  ::Sinatra::Base.register Dputs::Sinatra
+end
