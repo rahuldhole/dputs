@@ -30,6 +30,22 @@ Gem::Specification.new do |spec|
   end
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
+  spec.post_install_message = <<~MSG
+  Thanks for installing dputs! 🎉
+  You can now use methods like dp, dpp, dputs, and dprint to debug your Ruby code easily.
+  For more information, visit: #{spec.homepage}
+
+  Usage:
+  Add the following to your `.irbrc` or `config/initializers/dputs.rb`:
+  require 'dputs'
+
+  - dp variable_name  # Prints variable name and value
+  - dpp variable_name # Pretty prints variable name and value
+  - dputs variable_name # Outputs variable name and value with a newline
+  - dprint variable_name # Outputs variable name and value without a newline
+
+  Enjoy debugging! 🚀
+  MSG
   spec.require_paths = ["lib"]
 
   # Uncomment to register a new dependency of your gem
