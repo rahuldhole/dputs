@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 require_relative "dputs/version"
 require 'pp'
+require 'ap'
 
 module Dputs
   class Error < StandardError; end
@@ -49,6 +50,12 @@ module Dputs
     name = Dputs.get_varname(var, "dpp")
     print "#{name}: "
     pp var
+  end
+
+  def dap(var)
+    name = Dputs.get_varname(var, "dpp")
+    print "#{name}: "
+    ap var
   end
 end
 

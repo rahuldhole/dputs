@@ -28,6 +28,14 @@ dputs my_var   #=> my_var: 123
 dp my_var      #=> my_var: 123
 dprint my_var  #=> my_var: 123 (no newline)
 dpp my_var     #=> my_var: 123 (pretty printed)
+dap nums       #=> nums:
+                        [
+                            [0] 3,
+                            [1] 4,
+                            [2] 5,
+                            [3] 1,
+                            [4] 2
+                        ]
 ````
 
 ## Development
